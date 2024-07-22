@@ -5,7 +5,7 @@ import { Neo4jUser } from "@/types";
 import { Record } from "neo4j-driver";
 export const getUserByID=async (id:string)=>{
     const result =await driver.executeQuery(
-        'MATCH(u : User { applicationId: $applicationId} )RETURN U',
+        'MATCH(u : User { applicationId: $applicationId} )RETURN u',
         {applicationId:id}
     );
     const users=result.records.map((record)=> record.get("u").properties);
