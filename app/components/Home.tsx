@@ -31,7 +31,7 @@ const HomePageClientComponent: React.FC<HomePageClientComponentProps>=({
         </div>
         <div className='mt-4 relative'>
            {users.map((user)=>(
-                <TinderCard onSwipe={(direction: String)=> handleSwipe(direction, user.applicationId)} className='absolute' key={user.applicationId}>
+                <TinderCard onSwipe={(direction: string)=> handleSwipe(direction, user.applicationId)} className='absolute' key={user.applicationId}>
                    <Card>
                         <CardHeader>
                             <CardTitle>{user.firstname}  {user.lastname}</CardTitle>
